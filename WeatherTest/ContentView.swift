@@ -8,9 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var weather: WelcomeElement?
+    
+    @State private var cityQuery: String = ""
+    @State private var city: String = ""
+    @State private var province: String = ""
+    @State private var country: String = ""
+    
     var body: some View {
-        Text("Hello, world!")
+        VStack {
+            HStack {
+                TextField("Search City", text: $cityQuery)
+                Button(action: {
+                    PullData.shared.fetchAPI(city: cityQuery){(weather, err) in
+                        if let err = err {
+                            print("Unable to fetch: ", err)
+                            return
+                        }
+                        if let weather = weather {
+                            print(weather)
+                            self.weather = weather
+                        }
+                        city = weather?.englishName ?? "City not found"
+                        province = weather?.administrativeArea.englishName ?? ""
+                        country = weather?.country.englishName ?? ""
+                    }
+                }) {
+                    Text("Search")
+                }
+            }
             .padding()
+            Text(city)
+            Text("\(province), \(country)")
+        }
     }
 }
 

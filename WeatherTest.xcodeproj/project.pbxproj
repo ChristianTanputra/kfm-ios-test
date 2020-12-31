@@ -11,6 +11,11 @@
 		DA91E136259CAF42000491B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91E135259CAF42000491B5 /* ContentView.swift */; };
 		DA91E138259CAF43000491B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA91E137259CAF43000491B5 /* Assets.xcassets */; };
 		DA91E13B259CAF43000491B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA91E13A259CAF43000491B5 /* Preview Assets.xcassets */; };
+		DA91E147259CB6CB000491B5 /* WelcomeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91E146259CB6CB000491B5 /* WelcomeElement.swift */; };
+		DA91E14B259CB6E7000491B5 /* AdministrativeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91E14A259CB6E7000491B5 /* AdministrativeArea.swift */; };
+		DA91E14E259CB6F7000491B5 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91E14D259CB6F7000491B5 /* Country.swift */; };
+		DA91E15A259CB731000491B5 /* TimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91E159259CB731000491B5 /* TimeZone.swift */; };
+		DA91E161259D90D5000491B5 /* PullData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91E160259D90D5000491B5 /* PullData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		DA91E137259CAF43000491B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA91E13A259CAF43000491B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA91E13C259CAF43000491B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA91E146259CB6CB000491B5 /* WelcomeElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeElement.swift; sourceTree = "<group>"; };
+		DA91E14A259CB6E7000491B5 /* AdministrativeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdministrativeArea.swift; sourceTree = "<group>"; };
+		DA91E14D259CB6F7000491B5 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		DA91E159259CB731000491B5 /* TimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZone.swift; sourceTree = "<group>"; };
+		DA91E160259D90D5000491B5 /* PullData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,8 @@
 		DA91E132259CAF42000491B5 /* WeatherTest */ = {
 			isa = PBXGroup;
 			children = (
+				DA91E145259CB653000491B5 /* Models */,
+				DA91E15F259D900F000491B5 /* Service */,
 				DA91E133259CAF42000491B5 /* WeatherTestApp.swift */,
 				DA91E135259CAF42000491B5 /* ContentView.swift */,
 				DA91E137259CAF43000491B5 /* Assets.xcassets */,
@@ -67,6 +79,25 @@
 				DA91E13A259CAF43000491B5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DA91E145259CB653000491B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA91E146259CB6CB000491B5 /* WelcomeElement.swift */,
+				DA91E14A259CB6E7000491B5 /* AdministrativeArea.swift */,
+				DA91E14D259CB6F7000491B5 /* Country.swift */,
+				DA91E159259CB731000491B5 /* TimeZone.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DA91E15F259D900F000491B5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DA91E160259D90D5000491B5 /* PullData.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +169,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA91E161259D90D5000491B5 /* PullData.swift in Sources */,
+				DA91E15A259CB731000491B5 /* TimeZone.swift in Sources */,
+				DA91E14B259CB6E7000491B5 /* AdministrativeArea.swift in Sources */,
 				DA91E136259CAF42000491B5 /* ContentView.swift in Sources */,
+				DA91E147259CB6CB000491B5 /* WelcomeElement.swift in Sources */,
+				DA91E14E259CB6F7000491B5 /* Country.swift in Sources */,
 				DA91E134259CAF42000491B5 /* WeatherTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.christiantanputra.WeatherTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +338,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.christiantanputra.WeatherTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
