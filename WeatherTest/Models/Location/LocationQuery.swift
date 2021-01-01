@@ -7,8 +7,8 @@
 
 import Foundation
 
-// MARK: - WelcomeElement
-struct WelcomeElement: Codable {
+// MARK: - LocationQuery
+struct LocationQuery: Codable {
     let key, type: String
     let englishName: String
     let country: Country
