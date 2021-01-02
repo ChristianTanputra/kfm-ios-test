@@ -14,16 +14,18 @@ struct SubCellView: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 12)
-                .background(Color(UIColor.systemGray2))
-                .opacity(0.1)
+            RoundedRectangle(cornerRadius: 6)
+                .background(Color(UIColor.systemBlue))
+                .opacity(0.5)
             VStack {
                 Text("\(value)")
                     .font(.title2)
+                    .foregroundColor(.white)
             }
             VStack {
                 Spacer()
                 Text(title)
+                    .foregroundColor(.white)
                     .padding()
             }
         }

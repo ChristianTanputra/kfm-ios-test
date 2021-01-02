@@ -15,18 +15,25 @@ struct MainCellView: View {
     @Binding var province: String
     @Binding var country: String
     @Binding var timeNow: String
+    @Binding var icon: Int
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 12)
-                .background(Color(UIColor.systemGray2))
-                .opacity(0.1)
+            RoundedRectangle(cornerRadius: 6)
+                .background(Color(UIColor.systemBlue))
+                .opacity(0.5)
             VStack {
+                // Icon image are taken directly from assets as URL is not given, and was advised not to pull from their website
+                Image("\(icon)")
                 Text("\(tempNow) \(unit)")
                     .font(.title2)
+                    .foregroundColor(.white)
                 Text(city)
+                    .foregroundColor(.white)
                 Text("\(province), \(country)")
+                    .foregroundColor(.white)
                 Text("\(timeNow)")
+                    .foregroundColor(.white)
             }
         }
     }

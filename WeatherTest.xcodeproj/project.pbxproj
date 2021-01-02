@@ -24,6 +24,7 @@
 		DA91E161259D90D5000491B5 /* PullData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91E160259D90D5000491B5 /* PullData.swift */; };
 		DAA178AE259ED8DB00563956 /* SubCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA178AD259ED8DB00563956 /* SubCellView.swift */; };
 		DAA178B1259F42F800563956 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA178B0259F42F800563956 /* SearchBar.swift */; };
+		DAA178B825A03E8900563956 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA178B725A03E8900563956 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		DA91E160259D90D5000491B5 /* PullData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullData.swift; sourceTree = "<group>"; };
 		DAA178AD259ED8DB00563956 /* SubCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCellView.swift; sourceTree = "<group>"; };
 		DAA178B0259F42F800563956 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		DAA178B725A03E8900563956 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				DA91E160259D90D5000491B5 /* PullData.swift */,
+				DAA178B725A03E8900563956 /* ImageLoader.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				DA49F85C259DB6BC00908960 /* Temperature.swift in Sources */,
 				DA91E14B259CB6E7000491B5 /* AdministrativeArea.swift in Sources */,
 				DA49F859259DB69E00908960 /* WeatherQuery.swift in Sources */,
+				DAA178B825A03E8900563956 /* ImageLoader.swift in Sources */,
 				DA91E136259CAF42000491B5 /* ContentView.swift in Sources */,
 				DA5D9714259E0B4800FD02C6 /* Result.swift in Sources */,
 				DA5D9711259E0B0800FD02C6 /* BgImageQuery.swift in Sources */,

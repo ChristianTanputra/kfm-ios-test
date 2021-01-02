@@ -11,17 +11,18 @@ import SwiftUI
 class PullData: NSObject {
 
     static let shared = PullData()
-//    var locationQuery = [LocationQuery]()
-//    var weatherQuery = [WeatherQuery]()
 
     func fetchLocationAPI(city: String, completion: @escaping (LocationQuery?, Error?) -> ()) {
+    
+        // Replace " " with "-" for query
+        let tempCity = city.replacingOccurrences(of: " ", with: "-")
         
         // API key
         let apiKey = "MGCZabTAAvcheDa1fBlJQ6QCncQ1CdHk"
         
         
         // Location URL
-        let urlStringLocation = "https://dataservice.accuweather.com/locations/v1/cities/search?apikey=\(apiKey)&q=\(city)"
+        let urlStringLocation = "https://dataservice.accuweather.com/locations/v1/cities/search?apikey=\(apiKey)&q=\(tempCity)"
         guard let urlLocation = URL(string: urlStringLocation) else { return }
         
         // Session Location
@@ -68,13 +69,17 @@ class PullData: NSObject {
     
     func fetchBGAPI(query: String, completion: @escaping (BgImageQuery?, Error?) -> ()) {
         
+        // Replace " " with "-" for query
+        let tempQuery = query.replacingOccurrences(of: " ", with: "-")
+        
         // API key
         let apiKey = "CC5twrAHdGL_t7WA6KGdmfj7XdsD_q76VfxbJPcgGFA"
         
         
         // BG URL
-        let urlStringBG = "https://api.unsplash.com/search/photos?page=1&query=\(query)&client_id=\(apiKey)"
+        let urlStringBG = "https://api.unsplash.com/search/photos?page=1&per_page=1&query=\(tempQuery)&client_id=\(apiKey)"
         guard let urlBG = URL(string: urlStringBG) else { return }
+
         
         // Session BG
         URLSession.shared.dataTask(with: urlBG) { (data, resp, err) in
